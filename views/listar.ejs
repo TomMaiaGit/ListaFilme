@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listar</title>
+</head>
+<body>
+  <h1> LISTA DE FILMES </h1>
+
+
+
+  
+  <table border="2">
+    <tr>
+        <td>ID</td>
+        <td>TITULO</td>
+        <td>GENERO</td>
+       <td colspan="2">OPÇÕES</td>
+        
+
+    </tr>
+    <tr>
+      
+      <% lista.forEach(linhas => { %>
+            <tr>
+                <td><%=linhas.ID_TITULO%></td>
+                <td><%=linhas.Titulo_Filme%></td>
+                <td><%=linhas.Genero%></td>
+                <a href="/edit/<%= item.id %>" class="btn btn-primary">Editar</a>
+              
+                
+            </tr>
+        <% }) %>
+    </tr>
+</table>
+  
+  
+</body>
+</html>
